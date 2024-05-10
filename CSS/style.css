@@ -1,0 +1,118 @@
+/* 1.  Attach a border of burlywood solid 2px to both tables and centre them both. */
+table {
+    border: burlywood 2px solid;
+    align-self: center;
+    margin: auto;
+    text-align: center;
+}
+
+/* 2. Change the text color of the h2 inside of the header tag. */
+h2 {
+    color: pink;
+}
+
+/* 3.  ...give the nav element a class of 'nav'
+    ...use the class name to access the anchor tags.
+    ...Remove the underline, add padding of 1rem and change the text color to aliceblue. */
+a {
+        text-decoration: none;
+        padding: 1rem;
+        color: aliceblue;
+    }
+
+    /* 4.  style the nav element and give it a background color of black and center it in the middle. */
+    nav {
+        background-color: black;
+        text-align: center;
+    }
+
+    /* 5.  give the main element an ID of main. Style it with a margin of 30 px and centre all the text in the main element. */
+    #main {
+        margin: 30px;
+        text-align: center;
+    }
+
+    /* 6.  Style all the children elements of aside and give it a dotted border of 10px with a text color of dimgrey. */
+    aside > p {
+        border: 10px pink dotted ;
+        color: dimgrey;
+    }
+
+    /* 7.  Style the button by using an Adjacent sibling selectors of aside and change the text color to cornflower blue. */
+     /* ensure that <tag> (button) is directly after other <tag> (aside)  */
+   aside + button {
+        color: cornflowerblue;
+    }
+
+    /* 8.  Highlight all article elements that are general siblings of the paragraph element. */
+    p ~ article {
+        background-color:pink ;
+    }
+
+    /* 9.  Use a univeral selector to change the font family to verdana and the thickness of the text to 800. */
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration-thickness: 800;
+    }
+
+    /* 10. Search what is a pseudo class and a pseudo element */
+
+    /* 11. ...Go to the 'parent element' of the h3 element and attach an id of hover.
+    ...Use a pseudo class to create a hovering effect when hovering of the 'parent element' to display the hidden h3 element.
+    ...The h3 element should have a background color of yellow with a padding of 2rex. */
+    h3{
+        color: white;
+    }
+
+    h3:hover{
+        background-color: yellow;
+        padding: 2rex;
+        color: black;
+    }
+    
+    /* 12. Use a pseudo class to set the anchor elements to be purple when clicked. */
+    a:active{
+        color: purple;
+    }
+
+    /* 13. Use a pseudo class to set the first element of the tr element to have a background color of yellowgreen. */
+    #first-child:first-child{
+        background-color: yellowgreen;
+    }
+
+    /* 14. Use a pseudo class to get the first element(td) of all  tr elements and change the text color to crimson.
+    ....Now change it so that it is only changes colour when hovering over it. */
+    tr:first-child:hover{
+        color: crimson;
+    }
+
+    /* 15. Use a pseudo class to select the first i element in every p element and change the text color to blue */
+    p>i:first-child{
+        color: blue;
+    }
+
+    /* 16. Use a pseudo class to select all i elements in the p elements and set it to a text colour of peru */
+    p>i{
+        color: peru;
+    }
+
+    /* 17. Use a pseudo element to change the text color to green yellow when selected/highlighted */
+    body:hover{
+        color: greenyellow;
+    }
+    
+    /* 18. Add a class name 'paragraph' to the paragraph element which is below the aside semantic element.
+    ...Use a pseudo element and reference the class 'paragraph', change the first line of the text colour to red. */
+    .paragraph:first-line{
+        color: red;
+    }
+
+    /* 19. Use the same calss name in Ques.18 and change the first letter text colorto blue; */
+    .paragraph::first-letter{
+        color:blue;
+    }
+
+    /* 20. Add the following gif before and after the article element, you cant use img tags..you must use a pseudo element */
+    article::before, article::after{
+        content: url(https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif);
+    }
